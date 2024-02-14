@@ -1,0 +1,130 @@
+<div class=" px-5">
+    <h3 class="text-5xl text-[#9522E1] font-normal m-2.5 capitalize">Some built in objects in javascript</h3>
+<div>
+    <div class=" grid grid-cols-1  xl:grid-cols-2 2xl:grid-cols-3 mx-auto my-5 items-stretch gap-5 justify-center ">
+        
+        <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+            <h3 class="my-2.5 text-2xl font-normal text-[white]">Math object:</h3>
+            <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p>Javascript has some built in object that contains some functions. one of them is Math. some math methods are...
+                <ol class="list-decimal pl-8">
+                    <li>Math.min(numbers), returns smallest number of given numbers.</li>
+                    <li>Math.max(numbers), returns largest number of given numbers.</li>
+                    <li>Math.PI() returns PI value ;</li>
+                    <li>Math.abs(number), returns absolute value of a number.</li>
+                    <li>Math.round(number), returns integer value of a number. based on decimal value. if decimal value greater than or equal 5 then return upper integer else return lower integer value. </li>
+                    <li>Math.floor(number), returns lower integer value of a number.  </li>
+                    <li>Math.ceil(number), returns upper integer value of a number.  </li>
+                    <li>Math.random(), returns a number between 0 to 1.  </li>
+                 </ol>
+        </p>
+        </div>     
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Date object:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p>Some date object examples are..
+                <ol class="list-decimal pl-8">
+                    <li>new Date(); returns today's date</li>
+                    <li>const date = new Date("yyyy-mm-dd"); to asign a date as a variable value</li>
+                    <li>We can also asign a varable of a date thus-> const date = new Date(year, monthIndex, dayNumber, hours, minute, second);</li>
+                    <li>date.getMonth() returns month index of given date. In javascript, month index start from 0. So Jonuary will be 0, February will be 1 etc. </li>
+                    <li>We can set a date variable's month or year or day like-> date.setMonth(11); to set date variable's month's value december.</li>
+                    <li>to convert date as local string format date.toLocalString(), if we want to get special region we can give a parameter like date.toLocalString("en-GB"); return date as English Great Britain format </li>
+                    <li>unix epoc -- 01 january 1970</li>
+                </ol>
+             </p>
+        </div>     
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Javascript swap</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p>Swap বলতে বুঝায় অদল বদল। আমরা যদি দুইটি Variable এর ভ্যালুকে অদল বদল করতে চাই তাহলে সেটি কয়েকভাবে করা যায়। <ol class="list-decimal pl-8">
+                <li>temporary varable এর মাধ্যমে।</li>
+                <li>Destructurning method ex: [x,y] = [y,x] এর মাধ্যমে।</li>
+                <li>অংক বা সংখ্যা থাকলে যোগ বিয়োগের মাধ্যমে।</li>
+                <li>বিট ওয়াইজ ম্যানুপুলেশন এর মাধ্যমে।</li>
+                <li></li>
+            </ol></p>
+        </div>
+
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Recap and Conditional Return:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p>আমরা চাইলে function এ কোনো কন্ডিশন দিয়ে ও কোনো ভ্যালু return করতে পারি। যেমন: <br>
+                // return a value with condition <br>
+
+                const isEven = (num)=>{<br>
+                    if (num %2 === 0){<br>
+                        return true;<br>
+                    }<br>
+                    else{<br>
+                        return false;<br>
+                    }<br>
+                }<br>
+                
+                console.log(isEven(24));//returns true<br>
+            </p>
+
+            
+        </div>
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Different types of parameters:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p>Function এর parameters যেকোনো ডেটা টাইপ তথা number, string, boolean, array and object  হতে পারে।</p>
+            <p> Example of array as parameter of a function: <br>
+                const numbers = [1,2,3,4,5,6];<br>
+                const sum = (array)=>{<br>
+                    let result = 0;<br>
+                    for (n of array){<br>
+                        result = result+n<br>
+                    }<br>
+                    return result<br>
+                }<br>
+        
+                const total = sum(numbers);<br>
+                console.log(total)<br>
+            </p>
+            
+        </div>
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Example of array object condition in a function:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p class="pl-4">
+                const numbers = [1,2,3,4,5,6]; <br>
+                const sortNumbers = (array)=>{<br>
+                    let evenNum= [];<br>
+                    let oddNum =[];<br>
+                    const arrangedNum = {<br>
+                        even:[],<br>
+                        odd:[]<br>
+                    }<br>
+                    for (n of array){<br>
+                        if (n%2 ===0){<br>
+                        //    evenNum.unshift(n)<br>
+                           evenNum.push(n) <br>
+                        }<br>
+        
+                        else{<br>
+                            oddNum.push(n)<br>
+                        }<br>
+                    }<br>
+                    arrangedNum.even = evenNum;<br>
+                    arrangedNum.odd=oddNum;<br>
+        
+                    return arrangedNum<br>
+                }<br>
+                console.log(sortNumbers(numbers));<br>
+            </p>
+            
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+</div>

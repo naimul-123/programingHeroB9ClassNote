@@ -92,7 +92,7 @@
             <h3 class="my-2.5 text-2xl font-normal">Logical not (!) operator:</h3>
             <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
 
-                <p>Logical not operator !</p>
+                <p>(!) indicate oposite, (!!) indicate oposite's oposite that means same direction. </p>
 
 
             
@@ -141,6 +141,39 @@
                
                   </p>
             
+            </div>
+        </div>
+        <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px] ">
+            <h3 class="my-2.5 text-2xl font-normal">True flase in condition:</h3>
+            <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
+
+                <p>ways of truthy</p>
+                <ol class="decimal pl-8">
+                    <li>asign the value of a variable True</li>
+                    <li>asign the value of a variable any number positive or negitive without 0 but string type '0' treated as string and it will be truthy</li>
+                    <li>asign the value of a variable any string without empty string (''), but </li>
+                    <li>empty object {} or empty array [] will be truthy</li> 
+                </ol>
+                <p>ways of falsy</p>
+                <ol class="decimal pl-8">
+                    <li>asign the value of a variable false but string type 'false' return true because it treated as string not boolean.</li>
+                    <li>number 0 will be falsy</li>
+                    <li>empty string '' but wihte space in empty string (' ') treated as string and it will return true</li>
+                    <li>undefined</li>
+                    <li>null</li>
+                    
+                </ol>
+            </div>
+        </div>
+
+        <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px] ">
+            <h3 class="my-2.5 text-2xl font-normal">double equal sign (==) vs triple equal sign (===) in comparision:</h3>
+            <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
+
+                <p>double equal sign(==) retuns true if only values of both are equal on the other hand triple equal sign (===) returns true if values and types of both are equal.</p>
+
+                <p>যখন কোনো boolean value এর সাথে অন্য কোনো টাইপের ডেটাকে double equal(==) দিয়ে compare করা হয়, তখন javascript ভিতরে ভিতরে দুইটাকেই number এ convert করে, এবং সে হিসেবেই রেজাল্ট রিটার্ন করে। আর এটাকে type coercion বলে।</p>
+                <p>সেইম রেফারেন্সকে ব্যবহার করে এমন দুইটি object অথবা ‍array কে compare করলে তা true return করবে। অন্যথায় তা false return করবে।</p>           
             </div>
         </div>
  

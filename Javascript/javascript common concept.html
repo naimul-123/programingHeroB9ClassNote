@@ -1,20 +1,24 @@
 <div class=" px-5">
-        <h3 class="text-5xl font-normal m-2.5 capitalize">Javascript String Method</h3>
-    <div>
+        <h3 class="text-5xl font-normal m-2.5 capitalize">Some common concept in javascript
         <div class=" grid grid-cols-1  xl:grid-cols-2 2xl:grid-cols-3 mx-auto my-5 items-stretch gap-5 justify-center ">
             
         <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
-            <h3 class="my-2.5 text-2xl font-normal">String:</h3>
+            <h3 class="my-2.5 text-2xl font-normal">Strongly/Static type vs Dynamic type programming:</h3>
             <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
-                <p>String এক ধরণের ডেটা। যা কোটেশন মার্ক বা ডাবল কোটেশন মার্ক দিয়ে লেখা হয়। </p>
-                <p>নিম্নোক্ত উপায়ে String Dicleration করা যায়।</p>
-                <ol class="list-decimal pl-8">
-                    <li>with single or double quotaition mark -- 'Rahim' or "Rahim" </li>
-                    <li>With back tick --`My string`</li>
-                    <li>With new keyword --new String("My string")  এ ক্ষেত্রে string টি একটি object হয়ে যায়।</li>
-                    <li>Array এর মতো string এ length method ব্যবহার করা যায়। string.length-> string এর length রিটার্ন করবে। এক্ষেত্রে white space ও কাউন্ট হবে। </li>
-                    <li>Array এর মতো string এ ও index দিয়ে ‍string এর পজিশনভ্যালু  বের করা যায়। ‍string[0] -> string এর ফার্স্ট পজিশনের ভ্যালু রিটার্ন করবে। তবে পার্থক্য হল  array এর index দিয়ে যেভাবে ভ্যালুকে পরিবর্তন করা যায়, এখানে সেভাবে পরিবর্তন করা যায় না। এজন্য বলা হয় string is immutable.</li>
-                </ol>
+                <p>Strongly typed language হল ঐ সব programming language যেখানে কোন ধরণের ডেটা assign করা হবে তা বলে দিতে হবে। অন্যদিকে Dynamic typed language এ এটা করা লাগে না। ডেটার ধরণ অনুযায়ী programming language type কে ঠিক করে নেয়। </p>
+                   <p>আবার দুই ধরণের ডেটা আছে, 1. primitive data and 2. non primitive data. 
+                    <br>
+                    primitive data হল -> number, boolean, string data <br>
+                    non-primitive data হল -> array, object data
+                   </p> 
+                   <p> ধরা যাক, x = 5; y = x সেট করা হল। এরপর y এর ভ্যালুকে আবার reassign করে y = 7 সেট করা হল। এ ক্ষেত্রে x এর value তে কোনো পরিবর্তন আসবে না। তবে object ও ‍array এর ক্ষেত্রে যদি object/array কে reassign না করে এর কোনো property কে পরিবর্তন করা হয় তাহলে আগেরটা ও পরিবর্তন হয়ে যাবে। যেমন:<br>
+                    const num = [1,2,3,5,6];<br>
+                    const num2 = num;<br>
+                    num2[2]= 8; <br>
+                    তাহলে num ও num2 দুইটাতেই 3rd position এর ভ্যালু 8 সেট হয়ে যাবে।
+
+                </p>
+
             </div>     
         </div>
         <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
@@ -92,22 +96,6 @@
                 <ol class="list-decimal pl-8">
                     <li>Multi-line strings</li>
                     <li>string interpolation</li>
-                </ol>
-            </div>
-        </div>
-        <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
-            <h3 class="my-2.5 text-2xl font-normal">Null vs undefined:</h3>
-            <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">            
-                <p>8 ways to get undefined</p>
-                <ol class="list-decimal pl-8">
-                    <li>variable that is not initialized will give undefined</li>
-                    <li>function with no return</li>
-                    <li>parameter that is not passed will be undefined</li>
-                    <li>if return has nothing on the rig ht side will return undefined</li>
-                    <li>property that dose not exist on an object will give you undefined</li>
-                    <li>accessing array elements outside of the index range.</li>
-                    <li>deleting an element inside an array</li>
-                    <li>set a value directly to undefined</li>
                 </ol>
             </div>
         </div>

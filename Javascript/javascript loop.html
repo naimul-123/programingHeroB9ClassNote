@@ -18,7 +18,7 @@
         <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
             <h3 class="my-2.5 text-2xl font-normal">for of loop:</h3>
             <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
-                <p>Array অথবা string এর প্রত্যেকটি উপাদান নিয়ে কাজ করার জন্য for of loop ব্যবহার হয়।</p>
+                <p>Array অথবা string এর প্রত্যেকটি উপাদান নিয়ে কাজ করার জন্য for of loop ব্যবহার হয়। তবে object এর মধ্যে এটি চালানো যায় না। এক্ষেত্রে সেইম প্রসেসে for in loop ব্যবহার করতে হবে। for in loop দিয়ে object এর প্রত্যেকটি key কে একটি variable এর মধ্যে পাওয়া যাবে। আর এ জন্য value পেতে হলে objectName[key] এভাবে পাওয়া যাবে। তবে একটু অন্যভাবে for of loop ব্যবহার করে object থেকে ভ্যালু পাওয়া যাবে। আর সেটি হলো, object থেকে প্রথমে key গুলোকে Object.keys(objectName) এভাবে array আকারে নিতে হবে। তারপর array এর মধ্যে loop চালাতে হবে। </p>
                 <p>
                     const numbers = [1,5,6,8,10]; <br>
                     for(num of numbers){<br>

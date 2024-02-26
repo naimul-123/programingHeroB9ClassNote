@@ -369,7 +369,7 @@
 
         // console.log(totalSalary(employees))
 
-        const numbers =[14,15,7,16,8,17,12,19];
+        // const numbers =[14,15,7,16,8,17,12,19];
 
         // function getMax(array){
         //     let maxVal=array[0];
@@ -418,7 +418,59 @@
         // let Nam = "name";
         // const Name = Nam.to
         // document.getElementsByTagName("tagName");
-        const btn = document.getElementById("btn");
-        btn.addEventListener('click', ()=>{
-            console.log("I am clicked!");
-        });
+        // const btn = document.getElementById("btn");
+        // btn.addEventListener('click', ()=>{
+        //     console.log("I am clicked!");
+        // });
+    //     class Product{
+    //         constructor(name, sku, price ){
+    //             this.name = name;
+    //             this.sku = sku;
+    //             this.price= price;
+    //     }
+    // }
+
+    // class Panjabi extends Product{
+    //     constructor(name, sku, price, size, color){
+    //         super(name, sku, price);
+    //         this.size = size;
+    //         this.color = color;
+    //     }
+    // }
+    // const lalPanjabi = new Panjabi("koli tupi", "kkd455", 2500, 40, "red");
+    // console.log(lalPanjabi);
+    // const numbers = [1,3,5,7,9];
+    // const even =[]
+    // for(let n = 0; n <numbers.length; n++){
+    //     even.push(numbers[n]+1);
+    // }
+    // console.log(even);
+
+//    const even = numbers.map(n => n+1)
+//    console.log(even)
+// const num = [33,50,79,78,90,101,30];
+// const divisableByten = num.filter(n => n%10 ===0);
+// const divisableByten = num.find(n => n%10 ===0);
+// console.log(divisableByten);
+// const instructor = [
+//     {name: 'Nodi', age: 28, position: 'Senior'},
+//     {name: 'Akil', age: 26, position: 'Junior'},
+//     {name: 'Shobuj', age: 30, position: 'Senior'},
+// ]
+
+// const senior = instructor.filter((ins)=> ins.position === 'Senior');
+// console.log(senior)
+
+// const people = [
+//     {name: 'mina', age: 20},
+//     {name: 'rina', age: 15},
+//     {name: 'suchorita', age: 22},
+
+// ]
+// const total = people.reduce(((prev, current)=> prev + current.age), 0);
+// console.log(total);
+// function min(nums){ return Math.min(nums)}
+// console.log(min(...[1,3,2 ]))
+// const nums = [1,2,3,4,5];
+// let output = nums.filter(n => n%2);
+// console.log(output);

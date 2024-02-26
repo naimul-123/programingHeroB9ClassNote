@@ -141,21 +141,61 @@
         </div>
     </div>
     <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Javascript Event:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p>HTML events are "things" that happen to HTML elements. When Javascript is used in HTML pages, Javascript can "react" on these events. For example: <ul class="list-disc pl-8">
+                <li>The user select, clicks or hovers the cursor over a certain element.</li>
+                <li>The user chooses a key on the keyboard.</li>
+                <li>The user resizes or closes the browser window.</li>
+                <li>A web page finishes loading</li>
+                <li>A form is submitted</li>
+                <li>A video is played, paused or finishes.</li>
+                <li>An error occurs.</li>
+            </ul></p>
+        </div>
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Common HTML Events:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <ol class="list-decimal pl-8">
+                <li>onClick</li>
+                <li>onchange</li>
+                <li>onmouseover</li>
+                <li>onkeydown</li>
+                <li>onload</li>
+                <li>onblur</li>
+            </ol>
+        </div>
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
         <h3 class="my-2.5 text-2xl font-normal text-[white]">Javascript Event Handler:</h3>
         <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
-            <p>আমরা জাভাস্ক্রিপ্ট এর event গুলোকে কয়েকভাবে handle করা যায় তার মধ্যে বহুল ব্যবহৃত হল: <ul class="list-disc pl-8">
-                <li>একটি function থাকবে, html এর মধ্যে function টিকে onclick = functionName() এভাবে কল করে। </li>
-                <li>dom এর যেকোনো সিলেক্টর দিয়ে element টিকে একসেস করে তারপর সেটিতে ‍addeventlistner দিয়ে এভাবে-- <br>
+            <p>An evnet handler is a routine that deals with the event, allowing a programmer to write code that is executed when the event occurs with the help of event attributes. <br>আমরা জাভাস্ক্রিপ্ট এর event গুলোকে কয়েকভাবে handle করা যায় তার মধ্যে বহুল ব্যবহৃত হল: <ul class="list-disc pl-8">
+                <li>By using an event handler->একটি function থাকবে, html এর মধ্যে function টিকে onclick = functionName() এভাবে কল করে। </li>
+                <li>By adding an event listener-> dom এর যেকোনো সিলেক্টর দিয়ে element টিকে একসেস করে তারপর সেটিতে ‍addeventlistner দিয়ে এভাবে-- <br>
                     const btn = document.getElementById("btn"); <br>
                     btn.addEventListener('click', ()=>{<br>
                         console.log("I am clicked!");<br>
                     });<br>
                 
                 </li>
-                <li></li>
-                <li></li>
-                <li></li>
             </ul></p>
+        </div>
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Event Bubbling & event capturing:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p>event bubbling is propagating an event from the lowest to the upword.</p>
+            <p>We can understand event bubbling as a sequence of calling the event handlers when one element is nested in another element and both the elements have registered listeners for the same event. So its ancestors on the way to top to bottom, calling is performed .
+            </p>
+            <p>But when we capture event it starts from top element to the target element.</p>
+            <p>if we don't want propagate, we can do this with-> event.stopPropagation()</p>
+        </div>
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Event Delegation:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p>Event delegation is basically a pattern to handle events efficiently. Instead of adding an event listener to each and every similar element, we can add an event listener to a parent element and call an event on a particular target using the .target property of the event object.</p>
         </div>
     </div>
 

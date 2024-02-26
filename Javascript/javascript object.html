@@ -1,7 +1,7 @@
 <div class=" px-5">
         <h3 class="text-5xl font-normal m-2.5 capitalize">Javascript Object</h3>
     <div>
-        <div class=" grid grid-cols-1  xl:grid-cols-2 2xl:grid-cols-3 mx-auto my-5 items-stretch gap-5 justify-center ">
+        <div class=" grid grid-cols-1  xl:grid-cols-2 mx-auto my-5 items-stretch gap-5 justify-center ">
             
         <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
             <h3 class="my-2.5 text-2xl font-normal">Object:</h3>
@@ -102,7 +102,7 @@
                 </ol>
             </div>
         </div>   
-    </div>
+    
    
    
     <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
@@ -138,4 +138,138 @@
               </table>
         </div>
     </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Destructuring:</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
+
+            <ol class="list-decimal pl-8">
+                <li>A tichnique for unpacking object, array, and assigning them to variables.</li>
+                <li>Helps to deal with function that have a lot of parameters, default values.</li>
+                <li>Is convenient to write, easy to maintain and friendly to read.</li>
+                <li>Saves from writing repetitive code.</li>
+            </ol>
+            <p>object কে Destructuring করতে হলে <br>
+                const userdata = {name: "Naimul", age: "32", phone: 01731408005}
+                const {name, age, phone} = objectName; <br>
+                আমরা চাইলে নতুন কোনো নাম দিয়ে variable গুলোকে সেট করতে পারি যেমন: <br>
+                const {name: userName, age:UserAge, phone:userContact} = objectName; <br>
+            </p>
+            <p>array কে Destructuring করতে হলে <br>
+                const numbers = [1, 5, 4, 7, 12]; <br>
+                const[num1, num2, num3] = numbers;
+            </p>
+            <p>
+                //advance use
+                function doubleThem(a,b){ <br>
+                    return [a*2, b*2];<br>
+
+                }<br>
+                const [num1, num2] = doubleThem(6, 8)<br>
+                console.log(num1, num2) //returns 12, 16<br>
+            </p>
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Object.keys:</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
+            <p>আমরা কোনো object এর key গুলোকে পেতে চাইলে, <br>
+                const keys = Object.keys(objectName); <br>
+                তাহলে  এটি একটি array রিটার্ন করবে যাতে object এর key গুলো থাকবে।
+
+            </p>
+            <p>একইভাবে কোনো object এর property গুলোর value গুলো একসাথে পেতে চাইলে, <br>
+                const values = Object.values(objectName); <br>
+                তাহলে  এটি একটি array রিটার্ন করবে যাতে object এর property গুলোর value গুলো থাকবে।
+
+            </p>
+            <p>একইভাবে কোনো object এর property গুলোর value কে জোড়ায় জোড়ায় পেতে চাই তাহলে, <br>
+                const pair = Object.entries(objectName); <br>
+               এটি একটি array এর মধ্যে প্রত্যেক জোড়াকে array আকারে রিটার্ন করবে।</p>
+            <p>object এর কোনো property কে delete করতে চাইলে, <br>
+               delete objectName.propertyName; <br>
+            এটাকে আমরা একটু অন্য ভাবে ও করতে পারি। আর সেটি হল ঐ property কে বাদ দিয়ে নতুন একটি object তৈরি করা <br>
+         const {deletededPropertyName, ...newObject} = objectName;
+        </p>
+            <p>কোনো object কে freeze করতে চাইলে, <br>
+                Object.freeze(objectName); <br>
+                freeze করলে ঐ object কে আর কোনো ধরণের পরিবর্তন করা যায় না। শুধু read করা যায়।<br>
+                Object.seal(objectName); এটা কিছুটা flexible, কেননা এতে কোনো object এর property এর ভ্যালুকে  মডিফাই করা যায় তবে ডিলিট বা নতুন কোনো property এড করা যায় না।
+               
+        </p>
+
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Class:</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
+            <p>class হল একটি ছাচ বা কাঠামো (template or blueprint) যার সাহায্যে কোনো একটি নির্দিষ্ট প্রকারের একটি অবজেক্ট তৈরি করা যায়। class এর নাম সবসময় বড় অক্ষরে শুরু করতে হয়। class এর মধ্যে variable, function সবই থাকতে পারে, তবে এখানে dicleration key অর্থাৎ var, let, const, function এই keyword গুলো থাকবে না। ধরা যাক, আমরা একটি product class বানাবো। এটা আমরা এভাবে করতে পারি: <br>
+                class Product{<br>
+                    constructor(name, sku, price ){<br>
+                        this.name = name,<br>
+                        this.sku = sku,<br>
+                        this.price= price <br>
+                }<br>
+            }<br>
+            const tupi = new Product("koli tupi", "kkd455", 250);<br>
+            console.log(tupi)<br>
+            </p>
+
+            <p>অনেক সময় একটি common class থাকে, যেটা দিয়ে কোনো কিছুর common বৈশিষ্টগুলোকে ডিফাইন করা হয়। তারপর আলাদা আলাদা বৈশিষ্টের জন্য আলাদা আলাদা নতুন class তৈরি করা হয়। আর সেই class এর মধ্যে আগের class কে extends করা হয়। যেমন: <br>
+                class Panjabi extends Product{ <br>
+                    constructor(name, sku, price, size, color){<br>
+                        super(name, sku, price);<br>
+                        this.size = size;<br>
+                        this.color = color;<br>
+                    }<br>
+                }<br>
+                const lalPanjabi = new Panjabi("koli tupi", "kkd455", 2500, 40, "red");<br>
+                console.log(lalPanjabi);<br>
+
+              </p>
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Prototypical inheritance:</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
+            <p> Prototypical inheritance inheritance refers to the ability to access object properties from another object. We use a javascript prototype to add new properties and methods to an existing object constructor.
+            </p>
+            <ol class="list-disc pl-8">Base-class (Prototype instance) 
+                <li>sub-class(instance)</li>
+                <li>sub-class(instance)</li>
+                <li>sub-class(instance)</li>
+            </ol>
+
+            <h3 class="text-3xl font-bold ">The Prototype Chain:</h3>
+            <p>Prototypal inheritance uses the concept of prototype chaining. let's explore that concept. Every object created contains [[Prototype]], which points either to another object or null. Envision an object C with a [[Prototype]] property that points th object B. Object B's [[Prototype]] property points to prototype object A. This continues onward, forming a kind of chain called the prototype chain.
+
+            </p>
+            <p>This concept is used when searc hing our code. When we need to find a property on an object, It is first searches for in the object and if not foun, it is searched for on that objects prototyp, and so on/ thus the entire prototype chain os traversed until the property os found or null is reached.</p>
+            <p>Truely there has no class in javascript. it can be called syntaxtic sugure.</p>
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">dot(.) notaition vs bracket ([]) notation:</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
+            <p>Object এর property এর value access করতে হলে আমরা দুইভাবেই করতে পারি। 
+            <ol class="list-decimal pl-8">Base-class (Prototype instance) 
+                <li>with dot(.) notaition -> ObjectName.propertyName</li>
+                <li>with bracket ([]) notation-> ObjectName['propertyName']</li>
+                
+            </ol>
+            তবে যদি কোনো propertyName special charecter বা number দিয়ে শুরু হয় অথবা হাইফেন দিয়ে যুক্ত হয় তখন bracket ([]) notation ব্যবহার করা বাধ্যতামূলক। bracket ([]) notation এ property name একটি string হবে বা একটি variable এর মধ্যে হতে হবে।
+        </p>
+            
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">optional chain:</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5">
+            <p>chain দিয়ে বিভিন্ন nested object এর value কে access করা যাবে। 
+            object এর মধ্যে কোনো property না পাওয়া গেলে by defalult error দিবে। তবে আমরা যদি propertyName? এভাবে দেই তাহলে error আসবে না। undefined দিবে।
+    
+        </p>
+            
+        </div>
+    </div>
+</div>
 </div>

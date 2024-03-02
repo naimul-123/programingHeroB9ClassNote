@@ -7,7 +7,7 @@ css:[
 'rules', 'css -3 Features', 'transform', 'animation','resources'
 ],
 git:[],
-Javascript:[ 'javascript basic', 'javascript conditional', 'javascript array', 'javascript loop', 'javascript string methods', 'javascript object', 'javascript function', 'Some BultIn Objects', 'javascript dom'],
+Javascript:[ 'javascript basic', 'javascript conditional', 'javascript array', 'javascript loop', 'javascript string methods', 'javascript object', 'javascript function', 'Some BultIn Objects', 'javascript dom', 'javascript Api', 'more about javascript'],
 nodeJs:[ 'nodejs intro',],
 MongoDb:['mongoDb intro']
 

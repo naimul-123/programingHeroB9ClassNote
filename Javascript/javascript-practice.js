@@ -474,3 +474,16 @@
 // const nums = [1,2,3,4,5];
 // let output = nums.filter(n => n%2);
 // console.log(output);
+// const sum = (a,b)=>{
+//    return a+b;
+    
+// }
+
+// const result = sum(3,2);
+// console.log(result);
+
+const friends = {f1:'Rahim', f2:"Karim", f3:"Safiq"};
+const stringify = JSON.stringify(friends);
+// console.log(stringify)
+const objectParse = JSON.parse(stringify);
+console.log(objectParse);

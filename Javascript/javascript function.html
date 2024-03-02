@@ -130,6 +130,33 @@
             
         </div>
     </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Closure:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p> কোনো একটি function এর মধ্যে অন্য আর একটি function কে কল করা বা রিটার্ন করা । এভাবে একটি ফাংশনকে যতগুলো ভেরিএবলে রাখা হবে, প্রত্যেকটির জন্য আলাদা আলাদা ইনসট্যান্স তৈরি হবে।</p>
+            <p> Example of default parameter of a function: <br>
+                
+                const stopwatch = ()=>{<br>
+                    let counter = 0;<br>
+                    function ()=>{<br>
+                        counter++;<br>
+                        return counter;<br>
+                    }<br>
+                }<br>
+     
+            </p>
+            
+            
+        </div>
+    </div>
+    <div class="bg-[#9522E1] p-4 space-y-3 shadow-[#9522E1] shadow-lg rounded-lg h-[450px] ">
+        <h3 class="my-2.5 text-2xl font-normal text-[white]">Call Back function:</h3>
+        <div class="border-l-8 border-[#FEDE00] bg-[white] text-[#9522E1] p-3 overflow-auto h-4/5">
+            <p> কোনো একটি function এর মধ্যে অন্য আর একটি function কে parameter হিসেবে পাঠানো হলে তাকে callback function বলে।</p>         
+            <p>functionName.length returns how many parameter you send in the function.</p>
+            <p>function এর মধ্যে যদি কোনো premitive data type এর ভ্যালুকে চেঞ্জ করা হয়, তাহলে তার outer scope অর্থাৎ function এর বাইরে ডিক্লেয়ার করা কোনো variable এর মানকে পরিবর্তন করবে না কিন্তু non premitive data type like array and object এর কোনো property এর ভ্যালুকে function এর মধ্যে চেঞ্জ করলে তা function এর বাইরের ভ্যালুকেও চেঞ্জ করে দেয়। এর কারণ হল ফাংশন এর মধ্যে non premitive data রেফারেন্স পাঠায়।</p>
+        </div>
+    </div>
 
 
 </div>

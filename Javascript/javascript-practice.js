@@ -482,8 +482,64 @@
 // const result = sum(3,2);
 // console.log(result);
 
-const friends = {f1:'Rahim', f2:"Karim", f3:"Safiq"};
-const stringify = JSON.stringify(friends);
-// console.log(stringify)
-const objectParse = JSON.parse(stringify);
-console.log(objectParse);
+// const friends = {f1:'Rahim', f2:"Karim", f3:"Safiq"};
+// const stringify = JSON.stringify(friends);
+// // console.log(stringify)
+// const objectParse = JSON.parse(stringify);
+// console.log(objectParse
+
+// const myLoader = ()=>{
+//     return new Promise((resolve, reject)=>{
+//         const success = Math.random();
+//         if(success<= 0.5){
+//             resolve(success);
+//         }
+//         else{
+//             reject(success);
+//         }
+//     })
+// }
+
+// myLoader()
+// .then((data)=> console.log('Resolved value:',data))
+// .catch((err)=> console.log('Rejected Value:',err));
+// regular function
+// async function loadData (){
+//     const res = await fetch('url here');
+//     const data = await res.json();
+//     console.log(data);
+// }
+
+// // ES6 function
+// const loadData = async()=>{
+//     const res = await fetch('url here');
+//     const data = await res.json();
+//     console.log(data);
+// }
+
+// const delayGreeting = (Name, delay)=>{
+//     setTimeout(()=>{
+//         console.log("Hello ", Name)
+//     }, delay)
+// }
+
+// delayGreeting("Naimul", 5000);
+
+
+const jock= ()=>{
+    console.log("Why don't scientists trust atoms? Because they make up everything!");
+}
+
+ const jockInterval =  setInterval(()=>{
+    jock();   
+}, 2000)
+
+
+
+setTimeout(()=>{
+    clearInterval(jockInterval);
+}, 11000)
+
+   
+
+

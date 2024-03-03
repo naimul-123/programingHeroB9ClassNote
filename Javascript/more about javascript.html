@@ -126,141 +126,243 @@
     <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
         <h3 class="my-2.5 text-2xl font-normal">Execution Context and Call Stack</h3>
         <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
-            <table class="table-auto">
-                <tr>
-                    <td>abstract</td>
-                    <td>delete</td>
-                    <td>function</td>
-                    <td>null</td>
-                    <td>throw</td>
-                </tr>
-                <tr>
-                    <td>bookean</td>
-                    <td>do</td>
-                    <td>goto</td>
-                    <td>package</td>
-                    <td>throws</td>
-                </tr>
-                <tr>
-                    <td>break</td>
-                    <td>double</td>
-                    <td>if</td>
-                    <td>private</td>
-                    <td>transient</td>
-                </tr>
-                <tr>
-                    <td>byte</td>
-                    <td>else</td>
-                    <td>implements</td>
-                    <td>protected</td>
-                    <td>true</td>
-                </tr>
-                <tr>
-                    <td>case</td>
-                    <td>enum</td>
-                    <td>import</td>
-                    <td>public</td>
-                    <td>try</td>
-                </tr>
-                <tr>
-                    <td>catch</td>
-                    <td>exprot</td>
-                    <td>in</td>
-                    <td>return</td>
-                    <td>typeof</td>
-                </tr>
-                <tr>
-                    <td>char</td>
-                    <td>extends</td>
-                    <td>instanceof</td>
-                    <td>short</td>
-                    <td>var</td>
-                </tr>
-                <tr>
-                    <td>class</td>
-                    <td>false</td>
-                    <td>int</td>
-                    <td>static</td>
-                    <td>void</td>
-                </tr>
-                <tr>
-                    <td>const</td>
-                    <td>final</td>
-                    <td>interface</td>
-                    <td>super</td>
-                    <td>volatile</td>
-                </tr>
-                <tr>
-                    <td>continue</td>
-                    <td>finally</td>
-                    <td>long</td>
-                    <td>switch</td>
-                    <td>while</td>
-                </tr>
-                <tr>
-                    <td>debugger</td>
-                    <td>float</td>
-                    <td>native</td>
-                    <td>synchronized</td>
-                    <td>With</td>
-                </tr>
-                <tr>
-                    <td>default</td>
-                    <td>for</td>
-                    <td>new</td>
-                    <td>this</td>
-                    <td></td>
-                </tr>
-            </table>
-        
-        </div>
-    </div>
+            <p>কোন কোড কোথায় রান হবে এটা নিয়ে আলোচনা করে।</p>
+            <ol class="list-disc pl-8">
+                <li>An execution context is an environment.</li>
+                <li>Inside the execution context a piece of javascript code gets executed.</li>
+                <li>Variables, parameters and other information related to the piece of code get stored in the execution context.</li>
+            </ol>
+            <h2 class="text-xl font-semibold">Execution Context</h2>
+            <p>There are two kinds of execution context in javascript. <ul class="list-disc pl-8"><li>Global Execution Context(GEC)</li>
+            <li>Function Execution Context(FEC)</li>
+        </ul>
+    </p>
+</div>
+</div>
 
     <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px] ">
-        <h3 class="my-2.5 text-2xl font-normal">জাভাস্ক্রিপ্ট নাম্বার</h3>
+        <h3 class="my-2.5 text-2xl font-normal">Global Execution Context</h3>
         <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
-            <p>নাম্বার সবসময় কোটেশন ছাড়া লিখতে হবে। কোটেশন দিলে নাম্বার ও স্ট্রিং হয়ে যায়। তবে জাভাস্ক্রিপ্টের কয়েকটি বিল্ডইন মেথডের মাধ্যমে নাম্বারে কনভার্ট করা যায়।  কোটেশন দেয়া নাম্বারের সাথে নাম্বার যোগ করলে তা স্ট্রিং হয়ে যায়। যেমন 20 + ‘20’ এটি 2020 হয়ে যাবে এবং এটি একটি স্ট্রিং। তবে বিযোগ, গুণ ভাগ করার ক্ষেত্রে সমস্যা হবে না। </p>
-            <p>Methods for converting string to number</p>
-            <ol class = "list-disc pl-8">
-                <li>parseInt() -> to convert a string to a intiger value</li>
-                <li>parseFloat()-> to convert a string to a floating point value</li>
-                <li>toFixed(numberof Decimal)-> to fixed number in cartain decimal point value. but it convert number to string. so be carefull.</li>
-            </ol>
+            <p class="text-base">Whenever the javascript engine receives a script file, it first creates a default execution context known as the global execution context(GEC)</p>
+                <ul class="list-disc pl-8">
+                    <li>GEC is the base/default execution context.</li>
+                    <li>All javascript code that is not inside of a function gets executed.</li>
+                    <li>For every javascript file, there can only be one GEC.</li>
+                </ul>
         
         </div>
     </div>
     <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px] ">
-        <h3 class="my-2.5 text-2xl font-normal">জাভাস্ক্রিপ্ট অপারেটর</h3>
+        <h3 class="my-2.5 text-2xl font-normal">Functional Execution Context</h3>
         <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
-            <p>Javascript operators are--</p>
-            <ol class = "list-disc pl-8">
-                <li>+ for addition</li>
-                <li>- for subtruction</li>
-                <li>* for multiplication</li>
-                <li>** for Exponentitation(Power)</li>
-                <li>/ for division</li>
-                <li>% for modulus(reminder)</li>
-                <li> let x=8; x%5;  return 3</li>
-            </ol>
+            <p class="text-base">Whenever a function is called, the javascript engine create a different type of execution context known as a function execution context (FEC)</p>
+            <ul class="list-disc pl-8">
+                <li>Every time a function is called, a new execution context is created for that function.</li>
+                <li>Each function has its own execution context.</li>
+                <li>Since every function call gets its own FEC, there can be more than one FEC in the run-time of a script.</li>
+            </ul>
 
         
         </div>
     </div>
 
     <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
-        <h3 class="my-2.5 text-2xl font-normal">জাভাস্ক্রিপ্ট অপারেটর শর্টহ্যান্ড</h3>
+        <h3 class="my-2.5 text-2xl font-normal">Phase</h3>
         <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
-            <ol class = "list-disc pl-8">  
-                <li> let x = 5; x+=3 console.log(x); return 8</li>
-                <li> let x = 5; x-=3 console.log(x); return 2</li>
-                <li> let x = 5; x*=3 console.log(x); return 15</li>
-                <li> let x = 5; x/=3 console.log(x); return 1.666666666666667</li>
+            <p>The execution context is created in two phase:</p>
+            <ol class="list-disc pl-8">
+                <li>Creation phase</li>
+                <li>Execution phase</li>
             </ol>
         
         </div>
     </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Creation Phase</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            <p>Creation phase is the phase in which the js engine has called a function but its execution has not started.</p>
+            <ol class="list-disc pl-8">
+                <li>Js engine is in the compilation phase</li>
+                <li>It just scans over the function code to compile the code.</li>
+                <li>it dose not execute any code.</li>
+            </ol>
+        
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Execution Phase</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            <p>During the execution phase, the javascript engine executes the code line by line.</p>
+            <ol class="list-disc pl-8">
+                <li>Assigns the value to variables and</li>
+                <li>Executes the function calls.</li>
+                
+            </ol>
+        
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Call stack</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            <p>The call stack is used by javascript to keep track of mulitple function calls. in order to manage the execution context, the javascript engine uses a call stack.</p>
+            
+        
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Single-threaded Asynchronous vs Synchronous</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            <p>By default javascript is single-threaded.</p>
+            <p>Single-threaded means
+                <ul class="list-disc pl-8">
+                    <li>only one statement is executed at a time.</li>
+                   <li>one call stack</li>
+                   <li>runs code line by line</li>
+                   <li>Must finish executing a piece of code before moving onto the next.</li>
+                </ul>
+                
+                </p>
+            <p> Normally জাভাস্ক্রিপ্ট এর কোডগুলো সিকুয়েন্স মেইনটেইন করে চলে। এটাকে Synchronous বলে। কিন্তু fetch, setTimeout এইগুলো এটা মেইনটেইন করে না।</p>
+            
+        
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">How asynchronous javascript works</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            <p>By default javascript is single-threaded.</p>
+            <p>Single-threaded means
+                <ul class="list-disc pl-8">
+                    <li>only one statement is executed at a time.</li>
+                   <li>one call stack</li>
+                   <li>runs code line by line</li>
+                   <li>Must finish executing a piece of code before moving onto the next.</li>
+                </ul>
+                
+                </p>
+            <p> Normally জাভাস্ক্রিপ্ট এর কোডগুলো সিকুয়েন্স মেইনটেইন করে চলে। এটাকে Synchronous বলে। কিন্তু fetch, setTimeout এইগুলো এটা মেইনটেইন করে না।</p>
+            
+        
+        </div>
+    </div>
 
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Promise</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            <p>The promise object represents the eventual completion(or failur) of an asynchronous operation and its resulting value. it receives a callback function as parameter. The  callback function has two parameter. 1. resolve and 2. reject. <br>
+             A promise is in one of these states:</p>
+            <ul class="list-decimal pl-8">
+                <li>Pending initial state, neither fulfilled nor rejected.</li>
+                <li>Resolve the operation was completed successfully. </li>
+                <li>Reject the operation failed.</li>
+            </ul>
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Fetch API</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            
+            <ul class="list-decimal pl-8">
+                <li>The fetch() method starts the process of fetching a resource from a server.</li>
+                <li>The fetch() method returns a promise that resolves th a response object.</li>
+                <li>A fetch() method only rejects when a network error is encountered.</li>
+            </ul>
+        </div>
+    </div>
 
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Advantage of Async/Await</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            
+            <ul class="list-decimal pl-8">
+                <li>async/await is a special syntax to work with promises in a more comfortable way.</li>
+                <li>It's surprisingly easy to understaind and use.</li>
+                <li>The await keyword can only be used inside an async function.</li>
+                <li>The await keyword makes t he function pause the execution and</li>
+                <li>wait for a resolved promise before it continues.</li>
+            </ul>
+            <p>Example of async function: <br>
+                // regular function<br>
+                async function loadData (){<br>
+                    const res = await fetch('url here');<br>
+                    const data = await res.json();<br>
+                    console.log(data);<br>
+                }<br>
+                <br>
+                // ES6 function<br>
+                const loadData = async()=>{<br>
+                    const res = await fetch('url here');<br>
+                    const data = await res.json();<br>
+                    console.log(data);<br>
+                }<br>
+
+            </p>
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">setTimeout</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+
+            <p> setTimeout() জাভাস্ক্রিপ্টের একটি বিল্টইন function, যা একটি callback function এবং মিলি সেকেন্ডের একটি টাইমকে প্যারামিটার হিসেবে রিসিভ করে। এটি যে টাইম সেট করে দেয়া হয়, মিনিমাম 
+            সে টাইমের পরে callback function টিকে রান করে। যদি টাইম সেট না করে দেয়া হয় তাহলে যে এক্সিকিউশনগুলো কোডে থাকবে তা সব শেষ করে তারপর এই কোডটি রান করে। আর এটি বন্ধ করতে clearTimeout(TimeoutName); এভাবে দিয়ে দিলে এটি বন্ধ হয়ে যাবে।</p>
+        </div> 
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Interval</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            <p> setInterval() ও জাভাস্ক্রিপ্টের একটি বিল্টইন function, যা একটি callback function এবং মিলি সেকেন্ডের একটি টাইমকে প্যারামিটার হিসেবে রিসিভ করে। এটি যে টাইম সেট করে দেয়া হয়, 
+                সে টাইম অন্তর অন্তর callback function টিকে রান করে। এটা চলতেই থাকবে যদি না আমরা জোর করে বন্ধ না করে দেই। আর এটি বন্ধ করতে clearInterval(intervalName); এভাবে দিয়ে দিলে এটি বন্ধ হয়ে যাবে।</p>
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Stack</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            
+            <ul class="list-decimal pl-8">
+                <li>Keeps track of all the operations in line to be executed.</li>
+                <li>Whenever a function is finished, it is popped from the stack.</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Event Queue</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            
+            <ul class="list-decimal pl-8">
+                <li>Sends new functions to the stack for processing.</li>
+                <li>Follows the queue data structure.</li>
+                <li>Maintains the correct sequence in which all operation should be sent for execution.</li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Try Catch</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            
+            <p> নরমাললি  আমাদের কোনো কোডে error থাকলে  error এর পরে আর কোনো কোড রান হবে না। তবে আমরা যদি কোডটি try- catch এর মধ্যে লিখি, তাহলে catch block এ error টি ধরা পরবে, এবং error এর পর ও কোডটি execute হবে। এবং error টাকে ও HTML এ দেখানো যাবে। এক কথায়, আমরা error কে আমাদের মতো করে handle করতে পারবো। try-catch এর সাথে আর একটি জিনিস থাকে, সেটি হল finally(), error থাকুক আর নাই থাকুক, finally() ব্লকটি রান করবেই। আমরা চাইলে try ব্লকের মধ্যে থেকেই কোনো একটি error কে throw কিওয়ার্ড এর মাধ্যমে catch ব্লকের মধ্যে পাঠাতে পারি।
+            </p>
+
+        </div>
+    </div>
+    <div class="bg-[#E7E9EB] p-4 space-y-3 shadow-md rounded-lg h-[450px]">
+        <h3 class="my-2.5 text-2xl font-normal">Interview Question and practice task</h3>
+        <div class="border-l-4 border-[#04AA6D] bg-white px-3 py-8 overflow-auto h-4/5 text-justify">
+            
+            <p>Interview questions</p>
+            <ul class="list-disc pl-8">
+                <li>Tell me something about js engine v8 internal mechanism</li>
+                <li>What is event loop in javascript</li>
+                <li>If Javascript is single threaded, how does it handle asynchronous call?</li>
+                <li>Differences between setTimeout and setInterval</li>
+                <li>Can you explain the difference between an async/await and promise?</li>
+                <li>What's the error handling strategy for promises that were rejected while awaiting? </li>
+                <li>Can you explain what the .then() method does?</li>
+            </ul>
+
+        </div>
+    </div>
 </div>
 
 </div>
